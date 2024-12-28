@@ -7,9 +7,7 @@ import { setUser } from "@/redux/features/userSlice";
 
 export const useFileUpload = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [object, setObject] = useState(
-    JSON.parse(localStorage.getItem("user")!)
-  );
+  
   const user = useAppSelector((state) => state.user.user);
   const dispatch = useAppDispatch();
 
