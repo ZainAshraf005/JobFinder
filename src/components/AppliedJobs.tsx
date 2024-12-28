@@ -42,7 +42,7 @@ const AppliedJobs = () => {
     } catch (error: unknown) {
       apiHandler(error);
     }
-  }, []);
+  }, [dispatch]);
 
   const handleSearch = (elem: React.ChangeEvent<HTMLInputElement>) => {
     const searchValue = elem.target.value.toLowerCase();
