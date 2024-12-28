@@ -5,7 +5,7 @@ import { addCorsHeaders } from "@/lib/cors";
 export const GET = async (
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
-) => {
+): Promise<NextResponse | unknown> => {
   try {
     const { id } = await params;
     if (!id)
