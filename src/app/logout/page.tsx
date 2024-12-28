@@ -31,7 +31,7 @@ const Page: React.FC = () => {
       toast.error("un authorized attempt");
       router.push("/");
     }
-  }, []);
+  });
   return (
     <div className="w-full h-screen flex justify-center items-center">
       <div className="loading loading-lg loading-spinner"></div>
