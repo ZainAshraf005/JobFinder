@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// USER MODEL 
+
+model User {
+  id       String   @id @default(uuid())
+  name     String
+  email    String   @unique
+  photo    String?
+  resume   Boolean? @default(false)
+  password String
+  role     String   @default("USER")
+
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  Job         Job[]
+  Application Application[]
+}
+
+// enum Role {
+//   USER
+//   ADMIN
+//   EMPLOYER
+// }
+
+model Job {
+  id          String        @id @default(uuid())
+  title       String
+  description String
+  location    String
+  salary      String?
+  type        String        @default("FULL_TIME")
+  postedAt    DateTime      @default(now())
+  employerId  String
+  employer    User          @relation(fields: [employerId], references: [id])
+  Application Application[]
+}
+
+// enum JobType {
+//   FULL_TIME
+//   PART_TIME
+//   REMOTE
+//   CONTRACT
+//   INTERNSHIP
+// }
+
+model Application {
+  id    String @id @default(uuid())
+  jobId String
+  job   Job    @relation(fields: [jobId], references: [id])
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  resumeUrl   String // Link to the applicant's resume
+  coverLetter String? // Optional cover letter
+  appliedAt   DateTime @default(now())
+}

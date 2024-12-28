@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Portal Website
+
+This is a **Full-Stack Job Portal** built with [Next.js 15](https://nextjs.org) using the **App Router**. It allows **job seekers** and **employers** to register, post jobs, and apply for them. The project leverages modern tools and libraries to provide a seamless and efficient user experience.
+
+## Tech Stack
+
+- **Next.js**: Full-stack framework for building the app.
+- **Prisma**: ORM for database interactions.
+- **SQLite**: Lightweight and easy-to-use database.
+- **TypeScript**: Ensures type safety throughout the codebase.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **DaisyUI**: Component library built on Tailwind CSS for rapid UI development.
+
+## Features
+
+- **Job Seekers**: 
+  - Register and create a profile.
+  - Browse and apply for jobs posted by employers.
+- **Employers**: 
+  - Register and create a company profile.
+  - Post job listings and manage applications.
+- **Modern Design**: Tailwind CSS and DaisyUI ensure a clean and responsive UI.
+- **Efficient Data Handling**: Prisma manages database operations with ease.
+- **Type-Safe Development**: TypeScript ensures reliable and maintainable code.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js installed on your system.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <project-directory>
