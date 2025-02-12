@@ -18,7 +18,7 @@ const Footer = () => {
         <p className=" tracking-wide">
           JobFinders Ltd.
           <br />
-          still working to give better user experience
+          It may have some issues due to sqlite but it is working right on my device.
         </p>
         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
       </aside>
